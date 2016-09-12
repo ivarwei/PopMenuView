@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26D427B91668502AC47B077B /* libPods-VVPopMenuViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2BBD977EFA5083DC9D186B /* libPods-VVPopMenuViewDemo.a */; };
+		2D2431201D8678CB007BD2B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D24311F1D8678CB007BD2B7 /* main.m */; };
+		2D2431231D8678CB007BD2B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431221D8678CB007BD2B7 /* AppDelegate.m */; };
+		2D2431261D8678CB007BD2B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431251D8678CB007BD2B7 /* ViewController.m */; };
+		2D2431291D8678CB007BD2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2431271D8678CB007BD2B7 /* Main.storyboard */; };
+		2D24312B1D8678CB007BD2B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D24312A1D8678CB007BD2B7 /* Assets.xcassets */; };
+		2D24312E1D8678CB007BD2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D24312C1D8678CB007BD2B7 /* LaunchScreen.storyboard */; };
+		2D2431581D867C2D007BD2B7 /* NSString+VVSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D24314F1D867C2D007BD2B7 /* NSString+VVSize.m */; };
+		2D2431591D867C2D007BD2B7 /* UIImage+VVColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431511D867C2D007BD2B7 /* UIImage+VVColor.m */; };
+		2D24315A1D867C2D007BD2B7 /* VVPopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431531D867C2D007BD2B7 /* VVPopMenuButton.m */; };
+		2D24315B1D867C2D007BD2B7 /* VVPopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */; };
+		2D24315C1D867C2D007BD2B7 /* VVPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */; };
+		2D2431601D8689F3007BD2B7 /* TestTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D24315E1D8689F3007BD2B7 /* TestTopView.m */; };
+		2D2431611D8689F3007BD2B7 /* TestTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D24315F1D8689F3007BD2B7 /* TestTopView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D24311B1D8678CB007BD2B7 /* VVPopMenuViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVPopMenuViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D24311F1D8678CB007BD2B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D2431211D8678CB007BD2B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D2431221D8678CB007BD2B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D2431241D8678CB007BD2B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2D2431251D8678CB007BD2B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2D2431281D8678CB007BD2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D24312A1D8678CB007BD2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D24312D1D8678CB007BD2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D24312F1D8678CB007BD2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D24314E1D867C2D007BD2B7 /* NSString+VVSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VVSize.h"; sourceTree = "<group>"; };
+		2D24314F1D867C2D007BD2B7 /* NSString+VVSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VVSize.m"; sourceTree = "<group>"; };
+		2D2431501D867C2D007BD2B7 /* UIImage+VVColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VVColor.h"; sourceTree = "<group>"; };
+		2D2431511D867C2D007BD2B7 /* UIImage+VVColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VVColor.m"; sourceTree = "<group>"; };
+		2D2431521D867C2D007BD2B7 /* VVPopMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVPopMenuButton.h; sourceTree = "<group>"; };
+		2D2431531D867C2D007BD2B7 /* VVPopMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuButton.m; sourceTree = "<group>"; };
+		2D2431541D867C2D007BD2B7 /* VVPopMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVPopMenuModel.h; sourceTree = "<group>"; };
+		2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuModel.m; sourceTree = "<group>"; };
+		2D2431561D867C2D007BD2B7 /* VVPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVPopMenuView.h; sourceTree = "<group>"; };
+		2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuView.m; sourceTree = "<group>"; };
+		2D24315D1D8689F3007BD2B7 /* TestTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTopView.h; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.h; sourceTree = "<group>"; };
+		2D24315E1D8689F3007BD2B7 /* TestTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTopView.m; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.m; sourceTree = "<group>"; };
+		2D24315F1D8689F3007BD2B7 /* TestTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestTopView.xib; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.xib; sourceTree = "<group>"; };
+		C760A91F8CA36D7ECFAF1641 /* Pods-VVPopMenuViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVPopMenuViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DA2BBD977EFA5083DC9D186B /* libPods-VVPopMenuViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VVPopMenuViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C5EB47851A82EF202A0796 /* Pods-VVPopMenuViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVPopMenuViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D2431181D8678CB007BD2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D427B91668502AC47B077B /* libPods-VVPopMenuViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D2431121D8678CB007BD2B7 = {
+			isa = PBXGroup;
+			children = (
+				2D24314D1D867C2D007BD2B7 /* VVPopMenuView */,
+				2D24311D1D8678CB007BD2B7 /* VVPopMenuViewDemo */,
+				2D24311C1D8678CB007BD2B7 /* Products */,
+				959C645A5E8FB5FCCA73C855 /* Pods */,
+				CE04B3C2ACC5E2E71450F2BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D24311C1D8678CB007BD2B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D24311B1D8678CB007BD2B7 /* VVPopMenuViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D24311D1D8678CB007BD2B7 /* VVPopMenuViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2D24315D1D8689F3007BD2B7 /* TestTopView.h */,
+				2D24315E1D8689F3007BD2B7 /* TestTopView.m */,
+				2D24315F1D8689F3007BD2B7 /* TestTopView.xib */,
+				2D2431211D8678CB007BD2B7 /* AppDelegate.h */,
+				2D2431221D8678CB007BD2B7 /* AppDelegate.m */,
+				2D2431241D8678CB007BD2B7 /* ViewController.h */,
+				2D2431251D8678CB007BD2B7 /* ViewController.m */,
+				2D2431271D8678CB007BD2B7 /* Main.storyboard */,
+				2D24312A1D8678CB007BD2B7 /* Assets.xcassets */,
+				2D24312C1D8678CB007BD2B7 /* LaunchScreen.storyboard */,
+				2D24312F1D8678CB007BD2B7 /* Info.plist */,
+				2D24311E1D8678CB007BD2B7 /* Supporting Files */,
+			);
+			path = VVPopMenuViewDemo;
+			sourceTree = "<group>";
+		};
+		2D24311E1D8678CB007BD2B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D24311F1D8678CB007BD2B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D24314D1D867C2D007BD2B7 /* VVPopMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2D24314E1D867C2D007BD2B7 /* NSString+VVSize.h */,
+				2D24314F1D867C2D007BD2B7 /* NSString+VVSize.m */,
+				2D2431501D867C2D007BD2B7 /* UIImage+VVColor.h */,
+				2D2431511D867C2D007BD2B7 /* UIImage+VVColor.m */,
+				2D2431521D867C2D007BD2B7 /* VVPopMenuButton.h */,
+				2D2431531D867C2D007BD2B7 /* VVPopMenuButton.m */,
+				2D2431541D867C2D007BD2B7 /* VVPopMenuModel.h */,
+				2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */,
+				2D2431561D867C2D007BD2B7 /* VVPopMenuView.h */,
+				2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */,
+			);
+			name = VVPopMenuView;
+			path = ../VVPopMenuView;
+			sourceTree = "<group>";
+		};
+		959C645A5E8FB5FCCA73C855 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C760A91F8CA36D7ECFAF1641 /* Pods-VVPopMenuViewDemo.debug.xcconfig */,
+				E5C5EB47851A82EF202A0796 /* Pods-VVPopMenuViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE04B3C2ACC5E2E71450F2BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2BBD977EFA5083DC9D186B /* libPods-VVPopMenuViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D24311A1D8678CB007BD2B7 /* VVPopMenuViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D2431321D8678CB007BD2B7 /* Build configuration list for PBXNativeTarget "VVPopMenuViewDemo" */;
+			buildPhases = (
+				F8224A85296E0DAC8F178F1C /* 📦 Check Pods Manifest.lock */,
+				2D2431171D8678CB007BD2B7 /* Sources */,
+				2D2431181D8678CB007BD2B7 /* Frameworks */,
+				2D2431191D8678CB007BD2B7 /* Resources */,
+				362129333D9472B83E9CB94C /* 📦 Embed Pods Frameworks */,
+				F36331765EBD2D3E80F8C854 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VVPopMenuViewDemo;
+			productName = VVPopMenuViewDemo;
+			productReference = 2D24311B1D8678CB007BD2B7 /* VVPopMenuViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D2431131D8678CB007BD2B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VV;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Jasonvvei;
+				TargetAttributes = {
+					2D24311A1D8678CB007BD2B7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2D2431161D8678CB007BD2B7 /* Build configuration list for PBXProject "VVPopMenuViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D2431121D8678CB007BD2B7;
+			productRefGroup = 2D24311C1D8678CB007BD2B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D24311A1D8678CB007BD2B7 /* VVPopMenuViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D2431191D8678CB007BD2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D24312E1D8678CB007BD2B7 /* LaunchScreen.storyboard in Resources */,
+				2D24312B1D8678CB007BD2B7 /* Assets.xcassets in Resources */,
+				2D2431611D8689F3007BD2B7 /* TestTopView.xib in Resources */,
+				2D2431291D8678CB007BD2B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		362129333D9472B83E9CB94C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36331765EBD2D3E80F8C854 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8224A85296E0DAC8F178F1C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D2431171D8678CB007BD2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2431591D867C2D007BD2B7 /* UIImage+VVColor.m in Sources */,
+				2D24315B1D867C2D007BD2B7 /* VVPopMenuModel.m in Sources */,
+				2D2431261D8678CB007BD2B7 /* ViewController.m in Sources */,
+				2D2431231D8678CB007BD2B7 /* AppDelegate.m in Sources */,
+				2D2431581D867C2D007BD2B7 /* NSString+VVSize.m in Sources */,
+				2D24315C1D867C2D007BD2B7 /* VVPopMenuView.m in Sources */,
+				2D24315A1D867C2D007BD2B7 /* VVPopMenuButton.m in Sources */,
+				2D2431601D8689F3007BD2B7 /* TestTopView.m in Sources */,
+				2D2431201D8678CB007BD2B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D2431271D8678CB007BD2B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D2431281D8678CB007BD2B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D24312C1D8678CB007BD2B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D24312D1D8678CB007BD2B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D2431301D8678CB007BD2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D2431311D8678CB007BD2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D2431331D8678CB007BD2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C760A91F8CA36D7ECFAF1641 /* Pods-VVPopMenuViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VVPopMenuViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.Jasonvvei.VVPopMenuViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D2431341D8678CB007BD2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C5EB47851A82EF202A0796 /* Pods-VVPopMenuViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VVPopMenuViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.Jasonvvei.VVPopMenuViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D2431161D8678CB007BD2B7 /* Build configuration list for PBXProject "VVPopMenuViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D2431301D8678CB007BD2B7 /* Debug */,
+				2D2431311D8678CB007BD2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D2431321D8678CB007BD2B7 /* Build configuration list for PBXNativeTarget "VVPopMenuViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D2431331D8678CB007BD2B7 /* Debug */,
+				2D2431341D8678CB007BD2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D2431131D8678CB007BD2B7 /* Project object */;
+}
