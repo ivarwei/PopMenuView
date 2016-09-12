@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Jasonvvei" => "https://github.com/Jasonvvei" }
   s.platform         = :ios, '8.0'
-  s.source           = { :git => "https://github.com/Jasonvvei/VVPopMenuView.git", :tag => s.version }
+  s.source           = { :git => "https://github.com/Jasonvvei/PopMenuView.git", :tag => s.version }
 
   s.source_files     = 'VVPopMenuView/*.{h,m}'
   s.requires_arc     = true
