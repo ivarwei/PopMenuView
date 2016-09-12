@@ -8,7 +8,7 @@
 
 #import "VVPopMenuView.h"
 #import "VVPopMenuButton.h"
-#import <POP.h>
+#import "POP.h"
 
 static CGFloat const VVPopMenuViewPopMenuButtonAnimationSpace       = 0.05;     // 每个Item直接的间隔时间
 static NSInteger const VVPopMenuViewMenuButtonDefaultMaxRow         = 2;        // 最大多少行数据，默认是2
