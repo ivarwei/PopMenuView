@@ -19,8 +19,8 @@
 		2D24315A1D867C2D007BD2B7 /* VVPopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431531D867C2D007BD2B7 /* VVPopMenuButton.m */; };
 		2D24315B1D867C2D007BD2B7 /* VVPopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */; };
 		2D24315C1D867C2D007BD2B7 /* VVPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */; };
-		2D2431601D8689F3007BD2B7 /* TestTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D24315E1D8689F3007BD2B7 /* TestTopView.m */; };
-		2D2431611D8689F3007BD2B7 /* TestTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D24315F1D8689F3007BD2B7 /* TestTopView.xib */; };
+		2D74C9471D87FD0300FAFE23 /* TestTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D74C9451D87FD0300FAFE23 /* TestTopView.m */; };
+		2D74C9481D87FD0300FAFE23 /* TestTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D74C9461D87FD0300FAFE23 /* TestTopView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +44,9 @@
 		2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuModel.m; sourceTree = "<group>"; };
 		2D2431561D867C2D007BD2B7 /* VVPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVPopMenuView.h; sourceTree = "<group>"; };
 		2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuView.m; sourceTree = "<group>"; };
-		2D24315D1D8689F3007BD2B7 /* TestTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTopView.h; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.h; sourceTree = "<group>"; };
-		2D24315E1D8689F3007BD2B7 /* TestTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTopView.m; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.m; sourceTree = "<group>"; };
-		2D24315F1D8689F3007BD2B7 /* TestTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestTopView.xib; path = ../../../Code/GBPopMenuView/GBPopMenuView/TestTopView.xib; sourceTree = "<group>"; };
+		2D74C9441D87FD0300FAFE23 /* TestTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTopView.h; sourceTree = "<group>"; };
+		2D74C9451D87FD0300FAFE23 /* TestTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTopView.m; sourceTree = "<group>"; };
+		2D74C9461D87FD0300FAFE23 /* TestTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTopView.xib; sourceTree = "<group>"; };
 		C760A91F8CA36D7ECFAF1641 /* Pods-VVPopMenuViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVPopMenuViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA2BBD977EFA5083DC9D186B /* libPods-VVPopMenuViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VVPopMenuViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C5EB47851A82EF202A0796 /* Pods-VVPopMenuViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VVPopMenuViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VVPopMenuViewDemo/Pods-VVPopMenuViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 		2D24311D1D8678CB007BD2B7 /* VVPopMenuViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2D24315D1D8689F3007BD2B7 /* TestTopView.h */,
-				2D24315E1D8689F3007BD2B7 /* TestTopView.m */,
-				2D24315F1D8689F3007BD2B7 /* TestTopView.xib */,
+				2D74C9441D87FD0300FAFE23 /* TestTopView.h */,
+				2D74C9451D87FD0300FAFE23 /* TestTopView.m */,
+				2D74C9461D87FD0300FAFE23 /* TestTopView.xib */,
 				2D2431211D8678CB007BD2B7 /* AppDelegate.h */,
 				2D2431221D8678CB007BD2B7 /* AppDelegate.m */,
 				2D2431241D8678CB007BD2B7 /* ViewController.h */,
@@ -208,7 +208,7 @@
 			files = (
 				2D24312E1D8678CB007BD2B7 /* LaunchScreen.storyboard in Resources */,
 				2D24312B1D8678CB007BD2B7 /* Assets.xcassets in Resources */,
-				2D2431611D8689F3007BD2B7 /* TestTopView.xib in Resources */,
+				2D74C9481D87FD0300FAFE23 /* TestTopView.xib in Resources */,
 				2D2431291D8678CB007BD2B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +275,7 @@
 				2D2431581D867C2D007BD2B7 /* NSString+VVSize.m in Sources */,
 				2D24315C1D867C2D007BD2B7 /* VVPopMenuView.m in Sources */,
 				2D24315A1D867C2D007BD2B7 /* VVPopMenuButton.m in Sources */,
-				2D2431601D8689F3007BD2B7 /* TestTopView.m in Sources */,
+				2D74C9471D87FD0300FAFE23 /* TestTopView.m in Sources */,
 				2D2431201D8678CB007BD2B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
