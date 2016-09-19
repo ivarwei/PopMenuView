@@ -42,13 +42,13 @@ typedef NS_ENUM(NSUInteger, VVPopMenuViewBackgroundType) {
 @property (nonatomic, assign) VVPopMenuViewBackgroundType backgroundType;
 @property (nonatomic, assign) VVPopMenuViewShowAnimationType showAnimationType;
 
-@property (nonatomic, weak, nullable) id<VVPopMenuViewDataSource> dataSource;
-@property (nonatomic, weak, nullable) id<VVPopMenuViewDelegate> delegate;
+@property (nonatomic, weak) id<VVPopMenuViewDataSource> dataSource;
+@property (nonatomic, weak) id<VVPopMenuViewDelegate> delegate;
 @property (nonatomic, assign, readonly) NSInteger maxColumn; // 最大列数
 
-+ (instancetype __nonnull)sharedInstance;
++ (instancetype)sharedInstance;
 
-- (void)showWithPopMenuModelArray:(NSArray<VVPopMenuModel *> * __nullable)popMenuModelArray;
+- (void)showWithPopMenuModelArray:(NSArray<VVPopMenuModel *> *)popMenuModelArray;
 - (void)disMiss;
 
 @end
@@ -58,23 +58,23 @@ typedef NS_ENUM(NSUInteger, VVPopMenuViewBackgroundType) {
 @protocol VVPopMenuViewDataSource <NSObject>
 
 @required
-- (NSString * __nonnull)closeButtonImageNameInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
+- (NSString *)closeButtonImageNameInPopMenuView:(VVPopMenuView *)popMenuView;
 
 @optional
-- (CGSize)closeButtonSizeInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (CGFloat)closeButtonBottomPaddingInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (CGFloat)popMenuButtonBottomPaddingInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (NSArray<VVPopMenuModel *> * __nonnull)popMenuModelArrayInPopMenuView:(VVPopMenuView * __nonnull)tableView;
+- (CGSize)closeButtonSizeInPopMenuView:(VVPopMenuView *)popMenuView;
+- (CGFloat)closeButtonBottomPaddingInPopMenuView:(VVPopMenuView *)popMenuView;
+- (CGFloat)popMenuButtonBottomPaddingInPopMenuView:(VVPopMenuView *)popMenuView;
+- (NSArray<VVPopMenuModel *> *)popMenuModelArrayInPopMenuView:(VVPopMenuView *)tableView;
 
 // button之间的间距和最大列数
-- (CGFloat)popMenuButtonHorizontalMarginInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (CGFloat)popMenuButtonVerticalMarginInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (NSUInteger)popMenuMaxColumnInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
+- (CGFloat)popMenuButtonHorizontalMarginInPopMenuView:(VVPopMenuView *)popMenuView;
+- (CGFloat)popMenuButtonVerticalMarginInPopMenuView:(VVPopMenuView *)popMenuView;
+- (NSUInteger)popMenuMaxColumnInPopMenuView:(VVPopMenuView *)popMenuView;
 
 // 顶部的topView
-- (UIView * __nullable)topViewInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (CGFloat)topViewTopInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
-- (CGFloat)topViewHeightInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
+- (UIView *)topViewInPopMenuView:(VVPopMenuView *)popMenuView;
+- (CGFloat)topViewTopInPopMenuView:(VVPopMenuView *)popMenuView;
+- (CGFloat)topViewHeightInPopMenuView:(VVPopMenuView *)popMenuView;
 
 @end
 
@@ -83,12 +83,11 @@ typedef NS_ENUM(NSUInteger, VVPopMenuViewBackgroundType) {
 @protocol VVPopMenuViewDelegate <NSObject>
 
 @required
-- (void)popMenuView:(VVPopMenuView * __nonnull)popMenuView didSelectItemAtIndex:(NSUInteger)index;
+- (void)popMenuViewWillDisMiss:(VVPopMenuView *)popMenuView selectItemAtIndex:(NSInteger)index;
+- (void)popMenuViewDidDisMiss:(VVPopMenuView *)popMenuView selectItemAtIndex:(NSInteger)index;
 
 @optional
-- (void)popMenuViewWillShow:(VVPopMenuView * __nonnull)popMenuView;
-- (void)popMenuViewDidShow:(VVPopMenuView * __nonnull)popMenuView;
-- (void)popMenuViewWillDisMiss:(VVPopMenuView * __nonnull)popMenuView;
-- (void)popMenuViewDidDisMiss:(VVPopMenuView * __nonnull)popMenuView;
+- (void)popMenuViewWillShow:(VVPopMenuView *)popMenuView;
+- (void)popMenuViewDidShow:(VVPopMenuView *)popMenuView;
 
 @end

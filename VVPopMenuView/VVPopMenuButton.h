@@ -13,9 +13,9 @@ typedef void (^VVCompletionAnimationBlock)();
 
 @interface VVPopMenuButton : UIButton
 
-+ (instancetype __nonnull)popMenuButtonWithPopMenuModel:(VVPopMenuModel * __nonnull)popMenuModel;
++ (instancetype)popMenuButtonWithPopMenuModel:(VVPopMenuModel *)popMenuModel;
 
-@property (nonatomic, copy, nullable) VVCompletionAnimationBlock completionAnimationBlock;
+@property (nonatomic, copy) VVCompletionAnimationBlock completionAnimationBlock;
 
 - (void)selectdAnimation;
 - (void)cancelAnimation;

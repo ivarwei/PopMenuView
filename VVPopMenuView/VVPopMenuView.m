@@ -99,8 +99,8 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
 }
 
 - (void)disMiss {
-    if ([self.delegate respondsToSelector:@selector(popMenuViewWillDisMiss:)]) {
-        [self.delegate popMenuViewWillDisMiss:self];
+    if ([self.delegate respondsToSelector:@selector(popMenuViewWillDisMiss:selectItemAtIndex:)]) {
+        [self.delegate popMenuViewWillDisMiss:self selectItemAtIndex:-1];
     }
     [self startDisMissAnimation];
 }
@@ -144,8 +144,8 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
     NSInteger count = self.popMenuModelArray.count;
     double animationTotalDuration = ((count - 1) * VVPopMenuViewPopMenuButtonAnimationSpace) + VVPopMenuViewAnimationDefaultDuration;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationTotalDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([weakSelf.delegate respondsToSelector:@selector(popMenuViewDidDisMiss:)]) {
-            [weakSelf.delegate popMenuViewDidDisMiss:weakSelf];
+        if ([weakSelf.delegate respondsToSelector:@selector(popMenuViewDidDisMiss:selectItemAtIndex:)]) {
+            [weakSelf.delegate popMenuViewDidDisMiss:weakSelf selectItemAtIndex:-1];
         }
         weakSelf.dataSource = nil;
         weakSelf.delegate = nil;
@@ -197,25 +197,22 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
 }
 
 - (void)selectPopMenuButtonAction:(VVPopMenuButton *)selectPopMenuButton {
-    if ([self.delegate respondsToSelector:@selector(popMenuViewWillDisMiss:)]) {
-        [self.delegate popMenuViewWillDisMiss:self];
+    NSInteger selectIndex = -1;
+    if ([self.popMenuButtonArray containsObject:selectPopMenuButton]) {
+        selectIndex = [self.popMenuButtonArray indexOfObject:selectPopMenuButton];
+    }
+    if ([self.delegate respondsToSelector:@selector(popMenuViewWillDisMiss:selectItemAtIndex:)]) {
+        [self.delegate popMenuViewWillDisMiss:self selectItemAtIndex:selectIndex];
     }
     __weak typeof(self) weakSelf = self;
     self.contentView.userInteractionEnabled = NO;
-    __block NSUInteger selectIndex = 0;
     [self.popMenuButtonArray enumerateObjectsUsingBlock:^(VVPopMenuButton * _Nonnull popMenuButton, NSUInteger index, BOOL * _Nonnull stop) {
         if (popMenuButton == selectPopMenuButton) {
             [popMenuButton selectdAnimation];
-            selectIndex = index;
         } else {
             [popMenuButton cancelAnimation];
         }
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(VVPopMenuViewAnimationDefaultDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([self.delegate respondsToSelector:@selector(popMenuView:didSelectItemAtIndex:)]) {
-            [self.delegate popMenuView:self didSelectItemAtIndex:selectIndex];
-        }
-    });
     [UIView animateWithDuration:VVPopMenuViewAnimationDefaultDuration animations:^{
         weakSelf.closeButton.transform = CGAffineTransformMakeRotation(0);
         weakSelf.closeButton.alpha = 0.0;
@@ -230,8 +227,8 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
             [popMenuButton removeFromSuperview];
         }];
         [weakSelf.popMenuButtonArray removeAllObjects];
-        if ([weakSelf.delegate respondsToSelector:@selector(popMenuViewDidDisMiss:)]) {
-            [weakSelf.delegate popMenuViewDidDisMiss:weakSelf];
+        if ([weakSelf.delegate respondsToSelector:@selector(popMenuViewDidDisMiss:selectItemAtIndex:)]) {
+            [weakSelf.delegate popMenuViewDidDisMiss:weakSelf selectItemAtIndex:selectIndex];
         }
         weakSelf.menuButtonHorizontalMargin = VVPopMenuViewMenuButtonHorizontalDefaultMargin;
         weakSelf.menuButtonVerticalMargin   = VVPopMenuViewMenuButtonVerticalDefaultMargin;

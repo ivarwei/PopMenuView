@@ -15,9 +15,9 @@ static NSString * const VVPopMenuButtonSelectdAnimationKey = @"VVPopMenuButtonSe
 static NSString * const VVTransformScaleKeyPathKey         = @"transform.scale";
 static NSString * const VVTransformOpacityKeyPathKey       = @"opacity";
 
-@interface VVPopMenuButton ()
+@interface VVPopMenuButton () <CAAnimationDelegate>
 
-@property (nonatomic, strong, nonnull) VVPopMenuModel *popMenuModel;
+@property (nonatomic, strong) VVPopMenuModel *popMenuModel;
 
 @end
 

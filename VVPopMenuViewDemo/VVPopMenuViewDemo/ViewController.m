@@ -88,10 +88,6 @@
 
 #pragma mark - VVPopMenuViewDelegate
 
-- (void)popMenuView:(VVPopMenuView *)popMenuView didSelectItemAtIndex:(NSUInteger)index {
-    NSLog(@"选择了: %@", @(index));
-}
-
 - (void)popMenuViewWillShow:(VVPopMenuView *)popMenuView {
     NSLog(@"popMenuViewWillShow");
 }
@@ -100,12 +96,12 @@
     NSLog(@"popMenuViewDidShow");
 }
 
-- (void)popMenuViewWillDisMiss:(VVPopMenuView *)popMenuView {
-    NSLog(@"popMenuViewWillDisMiss");
+- (void)popMenuViewWillDisMiss:(VVPopMenuView *)popMenuView selectItemAtIndex:(NSInteger)index{
+    NSLog(@"popMenuViewWillDisMiss   %@",@(index).stringValue);
 }
 
-- (void)popMenuViewDidDisMiss:(VVPopMenuView *)popMenuView {
-    NSLog(@"popMenuViewDidDisMiss");
+- (void)popMenuViewDidDisMiss:(VVPopMenuView *)popMenuView selectItemAtIndex:(NSInteger)index{
+    NSLog(@"popMenuViewDidDisMiss   %@",@(index).stringValue);
 }
 
 @end
