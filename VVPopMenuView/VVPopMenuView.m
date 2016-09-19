@@ -379,6 +379,11 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
         closeButtonWidth = 30.0;
         closeButtonHeiught = closeButtonWidth;
     }
+    if ([self.dataSource respondsToSelector:@selector(closeButtonSizeInPopMenuView:)]) {
+        CGSize closeButtonSize = [self.dataSource closeButtonSizeInPopMenuView:self];
+        closeButtonWidth = closeButtonSize.width;
+        closeButtonHeiught = closeButtonSize.height;
+    }
     closeButtonCenterX = self.frame.size.width * 0.5;
     CGFloat bottomPadding = 0.0;
     if ([self.dataSource respondsToSelector:@selector(closeButtonBottomPaddingInPopMenuView:)]) {

@@ -61,6 +61,7 @@ typedef NS_ENUM(NSUInteger, VVPopMenuViewBackgroundType) {
 - (NSString * __nonnull)closeButtonImageNameInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
 
 @optional
+- (CGSize)closeButtonSizeInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
 - (CGFloat)closeButtonBottomPaddingInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
 - (CGFloat)popMenuButtonBottomPaddingInPopMenuView:(VVPopMenuView * __nonnull)popMenuView;
 - (NSArray<VVPopMenuModel *> * __nonnull)popMenuModelArrayInPopMenuView:(VVPopMenuView * __nonnull)tableView;

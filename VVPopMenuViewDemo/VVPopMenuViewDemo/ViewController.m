@@ -57,6 +57,10 @@
 
 #pragma mark - VVPopMenuViewDataSource
 
+- (CGSize)closeButtonSizeInPopMenuView:(VVPopMenuView *)popMenuView {
+    return CGSizeMake(33, 33);
+}
+
 - (NSString *)closeButtonImageNameInPopMenuView:(VVPopMenuView *)popMenuView {
     return @"tabbar_compose_background_icon_add";
 }
