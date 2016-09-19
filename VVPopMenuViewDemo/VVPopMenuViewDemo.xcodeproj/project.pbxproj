@@ -19,6 +19,7 @@
 		2D24315A1D867C2D007BD2B7 /* VVPopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431531D867C2D007BD2B7 /* VVPopMenuButton.m */; };
 		2D24315B1D867C2D007BD2B7 /* VVPopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */; };
 		2D24315C1D867C2D007BD2B7 /* VVPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */; };
+		2D58DDB61D8F81F4004E69A1 /* VVPopMenuView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2D58DDB51D8F81F4004E69A1 /* VVPopMenuView.podspec */; };
 		2D74C9471D87FD0300FAFE23 /* TestTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D74C9451D87FD0300FAFE23 /* TestTopView.m */; };
 		2D74C9481D87FD0300FAFE23 /* TestTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D74C9461D87FD0300FAFE23 /* TestTopView.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		2D2431551D867C2D007BD2B7 /* VVPopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuModel.m; sourceTree = "<group>"; };
 		2D2431561D867C2D007BD2B7 /* VVPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVPopMenuView.h; sourceTree = "<group>"; };
 		2D2431571D867C2D007BD2B7 /* VVPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVPopMenuView.m; sourceTree = "<group>"; };
+		2D58DDB51D8F81F4004E69A1 /* VVPopMenuView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VVPopMenuView.podspec; path = ../VVPopMenuView.podspec; sourceTree = "<group>"; };
 		2D74C9441D87FD0300FAFE23 /* TestTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTopView.h; sourceTree = "<group>"; };
 		2D74C9451D87FD0300FAFE23 /* TestTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTopView.m; sourceTree = "<group>"; };
 		2D74C9461D87FD0300FAFE23 /* TestTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTopView.xib; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		2D2431121D8678CB007BD2B7 = {
 			isa = PBXGroup;
 			children = (
+				2D58DDB51D8F81F4004E69A1 /* VVPopMenuView.podspec */,
 				2D24314D1D867C2D007BD2B7 /* VVPopMenuView */,
 				2D24311D1D8678CB007BD2B7 /* VVPopMenuViewDemo */,
 				2D24311C1D8678CB007BD2B7 /* Products */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D24312E1D8678CB007BD2B7 /* LaunchScreen.storyboard in Resources */,
+				2D58DDB61D8F81F4004E69A1 /* VVPopMenuView.podspec in Resources */,
 				2D24312B1D8678CB007BD2B7 /* Assets.xcassets in Resources */,
 				2D74C9481D87FD0300FAFE23 /* TestTopView.xib in Resources */,
 				2D2431291D8678CB007BD2B7 /* Main.storyboard in Resources */,
