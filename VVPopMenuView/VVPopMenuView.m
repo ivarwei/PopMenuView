@@ -18,7 +18,6 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
 
 @interface VVPopMenuView ()
 
-@property (nonatomic, assign) NSInteger maxColumn; // 最大列数
 @property (nonatomic, assign) CGFloat menuButtonHorizontalMargin;   // 水平方向的间距
 @property (nonatomic, assign) CGFloat menuButtonVerticalMargin;     // 竖直方向的间距
 
@@ -43,7 +42,6 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
     if (self = [super init]) {
         self.backgroundColor = [UIColor clearColor];
         self.frame = [UIScreen mainScreen].bounds;
-        self.maxColumn = VVPopMenuViewMenuButtonDefaultMaxColumn;
         self.menuButtonHorizontalMargin = VVPopMenuViewMenuButtonHorizontalDefaultMargin;
         self.menuButtonVerticalMargin   = VVPopMenuViewMenuButtonVerticalDefaultMargin;
     }
@@ -75,10 +73,6 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
     }
     if ([self.dataSource respondsToSelector:@selector(popMenuButtonVerticalMarginInPopMenuView:)]) {
         self.menuButtonVerticalMargin = [self.dataSource popMenuButtonVerticalMarginInPopMenuView:self];
-    }
-    // 最大列数
-    if ([self.dataSource respondsToSelector:@selector(popMenuMaxColumnInPopMenuView:)]) {
-        self.maxColumn = [self.dataSource popMenuMaxColumnInPopMenuView:self];
     }
     if (self.popMenuModelArray == nil) {
         if ([self.dataSource respondsToSelector:@selector(popMenuModelArrayInPopMenuView:)]) {
@@ -192,7 +186,6 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
         [weakSelf.popMenuButtonArray removeAllObjects];
         weakSelf.menuButtonHorizontalMargin = VVPopMenuViewMenuButtonHorizontalDefaultMargin;
         weakSelf.menuButtonVerticalMargin   = VVPopMenuViewMenuButtonVerticalDefaultMargin;
-        weakSelf.maxColumn = VVPopMenuViewMenuButtonDefaultMaxColumn;
     }];
 }
 
@@ -232,7 +225,6 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
         }
         weakSelf.menuButtonHorizontalMargin = VVPopMenuViewMenuButtonHorizontalDefaultMargin;
         weakSelf.menuButtonVerticalMargin   = VVPopMenuViewMenuButtonVerticalDefaultMargin;
-        weakSelf.maxColumn = VVPopMenuViewMenuButtonDefaultMaxColumn;
         weakSelf.dataSource = nil;
         weakSelf.delegate = nil;
     }];
@@ -240,9 +232,17 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
 
 #pragma mark - Property Method
 
+- (NSInteger)maxColumn {
+    if ([self.dataSource respondsToSelector:@selector(popMenuMaxColumnInPopMenuView:)]) {
+        return [self.dataSource popMenuMaxColumnInPopMenuView:self];
+    }
+    return VVPopMenuViewMenuButtonDefaultMaxColumn;
+}
+
 - (void)setPopMenuModelArray:(NSArray<VVPopMenuModel *> *)popMenuModelArray {
-    if (popMenuModelArray.count > self.maxColumn * VVPopMenuViewMenuButtonDefaultMaxRow) {
-        _popMenuModelArray = [[NSMutableArray arrayWithArray:popMenuModelArray] subarrayWithRange:NSMakeRange(0, self.maxColumn * VVPopMenuViewMenuButtonDefaultMaxRow)];
+    NSInteger maxColumn = self.maxColumn;
+    if (popMenuModelArray.count > maxColumn * VVPopMenuViewMenuButtonDefaultMaxRow) {
+        _popMenuModelArray = [[NSMutableArray arrayWithArray:popMenuModelArray] subarrayWithRange:NSMakeRange(0, maxColumn * VVPopMenuViewMenuButtonDefaultMaxRow)];
     } else {
         _popMenuModelArray = popMenuModelArray;
     }
@@ -471,12 +471,13 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
 }
 
 - (NSMutableArray<NSValue *> *)calculatePopMenuButtonsFinalPosition {
+    NSInteger maxColumn = self.maxColumn;
     NSInteger totalCount = self.popMenuModelArray.count;
-    NSInteger totalRow = (totalCount + self.maxColumn - 1) / self.maxColumn;
+    NSInteger totalRow = (totalCount + maxColumn - 1) / maxColumn;
     NSMutableArray<NSValue *> *finalPositionArray  = [NSMutableArray arrayWithCapacity:totalCount];
     
     CGFloat selfHeight = self.frame.size.height;
-    CGFloat finalPopMenuWidth = (self.frame.size.width - self.maxColumn * self.menuButtonHorizontalMargin) / self.maxColumn;
+    CGFloat finalPopMenuWidth = (self.frame.size.width - maxColumn * self.menuButtonHorizontalMargin) / maxColumn;
     CGFloat finalPopMenuHeight = finalPopMenuWidth;
     CGFloat finalPopMenuX = 0.0;
     CGFloat finalPopMenuY = 0.0;
@@ -487,8 +488,8 @@ static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        
     NSInteger rowIndex = 0;
     
     for (NSInteger index = 0; index < totalCount; index++) {
-        colnumIndex = index % self.maxColumn;
-        rowIndex = index / self.maxColumn;
+        colnumIndex = index % maxColumn;
+        rowIndex = index / maxColumn;
         finalPopMenuX = (colnumIndex + 0.5) * self.menuButtonHorizontalMargin + colnumIndex * finalPopMenuWidth;
         finalPopMenuY = selfHeight - popMenuButtonBottomPadding - totalHeight + rowIndex * finalPopMenuHeight + (rowIndex - 1) * self.menuButtonVerticalMargin;
         CGRect finalPositionRect = CGRectMake(finalPopMenuX, finalPopMenuY, finalPopMenuWidth, finalPopMenuHeight);
