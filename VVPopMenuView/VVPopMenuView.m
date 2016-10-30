@@ -25,6 +25,7 @@ static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIView *topView;
+@property (nonatomic, weak) CAGradientLayer *gradientLayer;
 
 @property (nonatomic, strong) NSArray<VVPopMenuModel *> *popMenuModelArray;
 @property (nonatomic, strong) NSMutableArray<VVPopMenuButton *> *popMenuButtonArray;
@@ -296,6 +297,7 @@ static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;
     [self.backgroundView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull subview, NSUInteger index, BOOL * _Nonnull stop) {
         [subview removeFromSuperview];
     }];
+    [self.gradientLayer removeFromSuperlayer];
     switch (self.backgroundType) {
         case VVPopMenuViewBackgroundTypeDarkBlur: {
             UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
@@ -321,6 +323,7 @@ static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;
         }
         case VVPopMenuViewBackgroundTypeGradient: {
             CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+            self.gradientLayer = gradientLayer;
             gradientLayer.colors = @[(id)[UIColor colorWithWhite:1.0 alpha:0.1].CGColor, (id)[UIColor colorWithWhite:0.0 alpha:1.0].CGColor];
             gradientLayer.startPoint = CGPointMake(0.5f, -0.5);
             gradientLayer.endPoint = CGPointMake(0.5, 1);
