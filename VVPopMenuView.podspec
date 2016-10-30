@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
 
   s.source_files     = 'VVPopMenuView/*.{h,m}'
   s.requires_arc     = true
-  s.dependency 'pop'
+  s.dependency 'pop', 'SDWebImage'
 
 end

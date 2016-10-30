@@ -17,16 +17,20 @@ typedef NS_ENUM(NSUInteger, VVPopMenuTransitionType) {
 
 @interface VVPopMenuModel : NSObject
 
-@property (nonatomic, assign) VVPopMenuTransitionType transitionType;
-@property (nonatomic, strong) UIColor                 *transitionTypeBubbleColor;
-@property (nonatomic, copy) NSString                *imageName;
-@property (nonatomic, copy) NSString                *title;
-@property (nonatomic, strong) UIColor                 *titleColor;
+@property (nonatomic, assign)   VVPopMenuTransitionType transitionType;
+@property (nonatomic, strong)   UIColor                 *transitionTypeBubbleColor;
+@property (nonatomic, strong)   UIImage                 *placeholdImage;
+@property (nonatomic, strong)   id                      image;
+@property (nonatomic, copy)     NSString                *title;
+@property (nonatomic, strong)   UIColor                 *titleColor;
+@property (nonatomic, strong)   id                      otherInfo;
 
 + (instancetype)popMenuModelWithTransitionType:(VVPopMenuTransitionType)transitionType
                      transitionTypeBubbleColor:(UIColor *)transitionTypeBubbleColor
-                                     imageName:(NSString *)imageName
+                                placeholdImage:(UIImage *)placeholdImage
+                                         image:(id)image
                                          title:(NSString *)title
-                                    titleColor:(UIColor *)titleColor;
+                                    titleColor:(UIColor *)titleColor
+                                     otherInfo:(id)otherInfo;
 
 @end

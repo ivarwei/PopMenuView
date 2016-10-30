@@ -10,11 +10,11 @@
 #import "VVPopMenuButton.h"
 #import "POP.h"
 
-static CGFloat const VVPopMenuViewPopMenuButtonAnimationSpace       = 0.05;     // 每个Item直接的间隔时间
-static NSInteger const VVPopMenuViewMenuButtonDefaultMaxRow         = 2;        // 最大多少行数据，默认是2
-static NSInteger const VVPopMenuViewMenuButtonDefaultMaxColumn      = 3;        // 最大多少行数据，默认是2
-static CGFloat const VVPopMenuViewMenuButtonHorizontalDefaultMargin = 5;        // 按钮左右间距默认5
-static CGFloat const VVPopMenuViewMenuButtonVerticalDefaultMargin   = 5;        // 按钮竖直间距默认5
+static CGFloat      const VVPopMenuViewPopMenuButtonAnimationSpace          = 0.05;     // 每个Item直接的间隔时间
+static NSInteger    const VVPopMenuViewMenuButtonDefaultMaxRow              = 2;        // 最大多少行数据，默认是2
+static NSInteger    const VVPopMenuViewMenuButtonDefaultMaxColumn           = 3;        // 最大多少行数据，默认是2
+static CGFloat      const VVPopMenuViewMenuButtonHorizontalDefaultMargin    = 5;        // 按钮左右间距默认5
+static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;        // 按钮竖直间距默认5
 
 @interface VVPopMenuView ()
 

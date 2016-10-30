@@ -9,6 +9,7 @@
 #import "VVPopMenuButton.h"
 #import "UIImage+VVColor.h"
 #import "NSString+VVSize.h"
+#import <SDWebImage/UIButton+WebCache.h>
 
 static NSString * const VVPopMenuButtonSelectdAnimationKey = @"VVPopMenuButtonSelectdAnimationKey";
 
@@ -43,7 +44,7 @@ static NSString * const VVTransformOpacityKeyPathKey       = @"opacity";
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font = [UIFont systemFontOfSize:14];
     self.titleLabel.numberOfLines = 0;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.clipsToBounds = YES;
     self.adjustsImageWhenHighlighted = NO;
     [self addTarget:self action:@selector(scaleToLarge) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
@@ -68,6 +69,7 @@ static NSString * const VVTransformOpacityKeyPathKey       = @"opacity";
     CGFloat textLabelY = imageViewY + imageViewHeight + imageAndTitlePadding;
     self.imageView.frame = CGRectMake(imageViewX, imageViewY, imageViewWidth, imageViewHeight);
     self.titleLabel.frame = CGRectMake(textLabelX, textLabelY, textLabelWidth, textLabelHeight);
+    self.imageView.layer.cornerRadius = imageViewWidth * 0.5;
 }
 
 + (instancetype)popMenuButtonWithPopMenuModel:(VVPopMenuModel *)popMenuModel {
@@ -204,7 +206,13 @@ static NSString * const VVTransformOpacityKeyPathKey       = @"opacity";
 
 - (void)setPopMenuModel:(VVPopMenuModel *)popMenuModel {
     _popMenuModel = popMenuModel;
-    [self setImage:[UIImage imageNamed:popMenuModel.imageName] forState:UIControlStateNormal];
+    if ([popMenuModel.image isKindOfClass:[UIImage class]]) {
+        [self setImage:popMenuModel.image forState:UIControlStateNormal];
+    } else if ([popMenuModel.image isKindOfClass:[NSString class]]) {
+        [self sd_setImageWithURL:[NSURL URLWithString:popMenuModel.image] forState:UIControlStateNormal placeholderImage:popMenuModel.placeholdImage];
+    } else {
+        [self setImage:nil forState:UIControlStateNormal];
+    }
     [self setTitle:popMenuModel.title forState:UIControlStateNormal];
     if (popMenuModel.titleColor != nil) {
         [self setTitleColor:popMenuModel.titleColor forState:UIControlStateNormal];

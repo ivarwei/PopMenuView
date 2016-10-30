@@ -14,21 +14,37 @@ CGFloat const VVPopMenuViewAnimationDefaultDuration    = 0.25;
 
 - (instancetype)initWithTransitionType:(VVPopMenuTransitionType)transitionType
              transitionTypeBubbleColor:(UIColor *)transitionTypeBubbleColor
-                             imageName:(NSString *)imageName
+                        placeholdImage:(UIImage *)placeholdImage
+                                 image:(id)image
                                  title:(NSString *)title
-                            titleColor:(UIColor *)titleColor {
+                            titleColor:(UIColor *)titleColor
+                             otherInfo:(id)otherInfo {
     if (self = [super init]) {
-        self.transitionType            = transitionType;
-        self.transitionTypeBubbleColor = transitionTypeBubbleColor;
-        self.imageName                 = imageName;
-        self.title                     = title;
-        self.titleColor                = titleColor;
+        self.transitionType             = transitionType;
+        self.transitionTypeBubbleColor  = transitionTypeBubbleColor;
+        self.placeholdImage             = placeholdImage;
+        self.image                      = image;
+        self.title                      = title;
+        self.titleColor                 = titleColor;
+        self.otherInfo                  = otherInfo;
     }
     return self;
 }
 
-+ (instancetype)popMenuModelWithTransitionType:(VVPopMenuTransitionType)transitionType transitionTypeBubbleColor:(UIColor *)transitionTypeBubbleColor imageName:(NSString *)imageName title:(NSString *)title titleColor:(UIColor *)titleColor {
-    VVPopMenuModel *popMenuModel = [[self alloc] initWithTransitionType:transitionType transitionTypeBubbleColor:transitionTypeBubbleColor imageName:imageName title:title titleColor:titleColor];
++ (instancetype)popMenuModelWithTransitionType:(VVPopMenuTransitionType)transitionType
+                     transitionTypeBubbleColor:(UIColor *)transitionTypeBubbleColor
+                                placeholdImage:(UIImage *)placeholdImage
+                                         image:(id)image
+                                         title:(NSString *)title
+                                    titleColor:(UIColor *)titleColor
+                                     otherInfo:(id)otherInfo {
+    VVPopMenuModel *popMenuModel = [[self alloc] initWithTransitionType:transitionType
+                                              transitionTypeBubbleColor:transitionTypeBubbleColor
+                                                         placeholdImage:placeholdImage
+                                                                  image:image
+                                                                  title:title
+                                                             titleColor:titleColor
+                                                              otherInfo:otherInfo];
     return popMenuModel;
 }
 

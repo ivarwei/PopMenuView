@@ -33,18 +33,48 @@
     
     
     NSMutableArray<VVPopMenuModel *> *popMenuModelArray = [NSMutableArray array];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_idea" title:@"标题1" titleColor:VVRandomColor]];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_photo" title:@"标题2\n(多行内容)" titleColor:VVRandomColor]];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeBubble transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_camera" title:@"标题3" titleColor:VVRandomColor]];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_lbs" title:@"标题4" titleColor:VVRandomColor]];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeBubble transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_review" title:@"标题5" titleColor:VVRandomColor]];
-    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault transitionTypeBubbleColor:nil
-                                                                      imageName:@"tabbar_compose_more" title:@"标题6\n(多行内容)" titleColor:VVRandomColor]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:[UIImage imageNamed:@"tabbar_compose_idea"]
+                                                                          title:@"标题1"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:[UIImage imageNamed:@"tabbar_compose_photo"]
+                                                                          title:@"标题2\n(多行内容)"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeBubble
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:[UIImage imageNamed:@"tabbar_compose_camera"]
+                                                                          title:@"标题3"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeDefault
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:[UIImage imageNamed:@"tabbar_compose_lbs"]
+                                                                          title:@"标题4"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeBubble
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:[UIImage imageNamed:@"tabbar_compose_review"]
+                                                                          title:@"标题5"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
+    [popMenuModelArray addObject:[VVPopMenuModel popMenuModelWithTransitionType:VVPopMenuTransitionTypeBubble
+                                                      transitionTypeBubbleColor:nil
+                                                                 placeholdImage:[UIImage imageNamed:@"img-1"]
+                                                                          image:@"http://7xls84.com1.z0.glb.clouddn.com/splash/2016/09/dd0648bec997b0c1bea2a599d1b263c0.jpg"
+                                                                          title:@"标题6\n(多行内容)"
+                                                                     titleColor:VVRandomColor
+                                                                      otherInfo:nil]];
     
     VVPopMenuView *popMenuView = [VVPopMenuView sharedInstance];
     popMenuView.dataSource = self;
