@@ -68,6 +68,8 @@ static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;
 #pragma mark - Public Method
 
 - (void)showWithPopMenuModelArray:(NSArray<VVPopMenuModel *> *)popMenuModelArray {
+    self.popMenuModelArray = popMenuModelArray;
+    self.frame = [UIScreen mainScreen].bounds;
     // 间距
     if ([self.dataSource respondsToSelector:@selector(popMenuButtonHorizontalMarginInPopMenuView:)]) {
         self.menuButtonHorizontalMargin = [self.dataSource popMenuButtonHorizontalMarginInPopMenuView:self];
@@ -80,9 +82,6 @@ static CGFloat      const VVPopMenuViewMenuButtonVerticalDefaultMargin      = 5;
             self.popMenuModelArray = [self.dataSource popMenuModelArrayInPopMenuView:self];
         }
     }
-    
-    self.popMenuModelArray = popMenuModelArray;
-    self.frame = [UIScreen mainScreen].bounds;
     if ([self.delegate respondsToSelector:@selector(popMenuViewWillShow:)]) {
         [self.delegate popMenuViewWillShow:self];
     }
