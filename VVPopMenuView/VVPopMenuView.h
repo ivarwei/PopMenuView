@@ -44,6 +44,7 @@ typedef NS_ENUM(NSUInteger, VVPopMenuViewBackgroundType) {
 
 @property (nonatomic, weak) id<VVPopMenuViewDataSource> dataSource;
 @property (nonatomic, weak) id<VVPopMenuViewDelegate> delegate;
+@property (nonatomic, strong, readonly) NSArray<VVPopMenuModel *> *popMenuModelArray;
 @property (nonatomic, assign, readonly) NSInteger maxColumn; // 最大列数
 
 + (instancetype)sharedInstance;
