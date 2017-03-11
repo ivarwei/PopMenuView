@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "VVPopMenuView"
-    s.version          = "0.2.0"
+    s.version          = "0.2.1"
     s.summary          = "VVPopMenuView is pop animation menu inspired by Sina weibo App."
     s.homepage         = "https://github.com/Jasonvvei/VVPopMenuView"
     s.license          = 'MIT'
